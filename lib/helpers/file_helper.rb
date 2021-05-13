@@ -21,4 +21,13 @@ class FileHelper
         def create_file(filename)
             FileUtils.touch(filename)
         end
-        
+
+        def directory_path(filename)
+            File.dirname(filename)
+        end
+
+        def directory_exists?(dir)
+            File.directory(dir)
+        end
+    end
+end
